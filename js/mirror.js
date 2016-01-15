@@ -11,12 +11,18 @@ var directionsService = new google.maps.DirectionsService();
 function initMap() {
 	directionsDisplay = new google.maps.DirectionsRenderer();
 	var mapBegin = {
+		mapTypeControl: true,
+		mapTypeControlsOptions: {
+			style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+			position: google.maps.ControlPosition.BOTTOM_RIGHT
+		},
 		zoom: 12,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	}
 	map = new google.maps.Map(document.getElementById('mapContainer'), mapBegin);
 	directionsDisplay.setMap(map);
 	directionsDisplay.setPanel(document.getElementById('locations'));
+	var GeoMarker = new GeolocationMarker(map);
 
 	if (navigator.geolocation){
 		navigator.geolocation.getCurrentPosition(function(position){
@@ -69,6 +75,12 @@ function calcRoute(){
   	$('#submit').on('click', function(){
   		calcRoute();
   	})
+
+  	$('#center').on('click', function(){
+  		map.setCenter(initialLocation);
+  	})
+
+
 
 	google.maps.event.addDomListener(window, 'load', initMap());
 
