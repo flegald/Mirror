@@ -1,0 +1,14 @@
+#mapContainer {
+	height: 200px;
+	width: 200px;
+}
+
+
+.mirrored {
+height: 250px;
+width: 250px;
+-moz-transform: scale(-1, 1);
+-webkit-transform: scale(-1, 1);
+transform: scale(-1, 1);
+text-align: right;
+}
