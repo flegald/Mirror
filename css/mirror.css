@@ -1,23 +1,23 @@
 body {
 	background-image: url('../img/background.jpg');
 	background-attachment: fixed;
-	color: white	;
 }
 	#mapContainer {
 		height: 300px;
-		width: 100%;
+		width: 80%;
 		border: 2px solid black;
+		margin-right: auto;
+		margin-left: auto;
 	}
 
 
 	.mirrored {
-	height: 100%;
-	width: 100%;
 	-moz-transform: scale(-1, 1);
 	-webkit-transform: scale(-1, 1);
 	transform: scale(-1, 1);
-	text-align: right;
 	}
+
+	
 
 	.mirroredDirections {
 	-moz-transform: scale(-1, 1);
@@ -29,6 +29,7 @@ body {
 
 	#locations {
 		text-align: center;
+		color: black;
 	}
 
 	#buttons {
@@ -47,3 +48,9 @@ body {
 	#directions {
 		background-color: white;
 	}
+
+	p {
+		color: white;
+	}
+
+	
