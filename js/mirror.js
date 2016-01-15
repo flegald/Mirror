@@ -11,17 +11,18 @@ var directionsService = new google.maps.DirectionsService();
 function initMap() {
 	directionsDisplay = new google.maps.DirectionsRenderer();
 	var mapBegin = {
-		mapTypeControl: true,
+		mapTypeControl: false,
+		zoomControl: false,
 		mapTypeControlsOptions: {
 			style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-			position: google.maps.ControlPosition.BOTTOM_RIGHT
+			position: google.maps.ControlPosition.TOP_LEFT
 		},
 		zoom: 12,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	}
 	map = new google.maps.Map(document.getElementById('mapContainer'), mapBegin);
 	directionsDisplay.setMap(map);
-	directionsDisplay.setPanel(document.getElementById('locations'));
+	directionsDisplay.setPanel(document.getElementById('directions'));
 	var GeoMarker = new GeolocationMarker(map);
 
 	if (navigator.geolocation){
@@ -64,12 +65,12 @@ function calcRoute(){
 
   	$('#mirror').on('click', function(){
   		$('#mirrorBox').addClass('mirrored');
-  		$('#directions').addClass('mirrored');
+  		$('#directions').addClass('mirroredDirections');
   	});
 
   	$('#normal').on('click', function(){
   		$('#mirrorBox').removeClass('mirrored');
-  		$('#directions').removeClass('mirrored');
+  		$('#directions').removeClass('mirroredDirections');
   	});
 
   	$('#submit').on('click', function(){
@@ -77,7 +78,9 @@ function calcRoute(){
   	})
 
   	$('#center').on('click', function(){
+  		map.setZoom(17);
   		map.setCenter(initialLocation);
+
   	})
 
 

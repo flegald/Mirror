@@ -1,22 +1,49 @@
-#mapContainer {
+body {
+	background-image: url('../img/background.jpg');
+	background-attachment: fixed;
+	color: white	;
+}
+	#mapContainer {
+		height: 300px;
+		width: 100%;
+		border: 2px solid black;
+	}
+
+
+	.mirrored {
 	height: 100%;
-	width: 400px;
-}
+	width: 100%;
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+	text-align: right;
+	}
+
+	.mirroredDirections {
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+	text-align: right;
+	}
 
 
-.mirrored {
-height: 100%;
-width: 400px;
--moz-transform: scale(-1, 1);
--webkit-transform: scale(-1, 1);
-transform: scale(-1, 1);
-text-align: right;
-}
+	#locations {
+		text-align: center;
+	}
 
-#locations {
-	text-align: center;
-}
+	#buttons {
+		text-align: center;
+	}
 
-#buttons {
-	text-align: center;
-}
+	button {
+		border-radius: 20%;
+		color: black;
+		background-image: url('../img/mustard.jpg	');
+		background-size: contain;
+		height: 50px;
+		width: 100px; 
+	}
+
+	#directions {
+		background-color: white;
+	}
