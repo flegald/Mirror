@@ -6,6 +6,7 @@ var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
  $(function(){
  	$('#fromLocate').hide();
+ 	$('#locations').hide();
 
 	
 function initMap() {
@@ -53,7 +54,6 @@ function calcRoute(){
 			directionsDisplay.setDirections(response);
 		}
 	});
-	console.log('click')
 };
 
 	$('#outSet').on('change', function(){
@@ -76,13 +76,26 @@ function calcRoute(){
   	});
 
   	$('#submit').on('click', function(){
+  		if ($('#outSet').val() === 'nothing' || $('#toLocate').val().length < 1){
+  			alert('Please fill out all fields')
+  		} else {
   		calcRoute();
+  		$('#locations').hide();
+  		}
   	})
 
   	$('#center').on('click', function(){
   		map.setZoom(17);
   		map.setCenter(initialLocation);
+  	})
 
+  	$('#getDirections').on('click', function(){
+  		$('#locations').show();
+  		$('html, body').scrollTop($('#locations'));
+  	})
+
+  	$('#exit').on('click', function(){
+  		$('#locations').hide()
   	})
 
 
