@@ -91,7 +91,7 @@ function calcRoute(){
 
   	$('#getDirections').on('click', function(){
   		$('#locations').show();
-  		$('html, body').scrollTop($('#locations'));
+  		$(window).scrollTop($('#locations')[0].scrollHeight);
   	})
 
   	$('#exit').on('click', function(){

@@ -33,12 +33,13 @@ body {
 		z-index: 100;
 		background-color: white;
 		border: 2px solid black;
-		width: 50%;
+		width: 300px;
 		padding-top: 10px;
 		margin-left: auto;
 		margin-right: auto;
 		border-radius: 10px;
 		padding-bottom: 10px;
+		padding-right: 10px;
 	}
 
 
