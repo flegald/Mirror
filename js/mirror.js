@@ -60,8 +60,10 @@ function calcRoute(){
  			var $outSet = $('#outSet').val();
  			if ($outSet === "customLocation"){
  				$('#fromLocate').show();
+ 				$('#locations').height('180px')
  			} else {
  				$('#fromLocate').hide();
+ 				$('#locations').height('150px')
  			}
  		});
 
@@ -97,6 +99,8 @@ function calcRoute(){
   	$('#exit').on('click', function(){
   		$('#locations').hide()
   	})
+
+
 
 
 

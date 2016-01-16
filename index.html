@@ -2,6 +2,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=Kadwa' rel='stylesheet' type='text/css'>
 		<link type="text/css" rel="stylesheet" href="css/normalize.css">
 		<link type="text/css" rel="stylesheet" href="css/mirror.css">
 	   <title>Mirror Nav</title>
@@ -15,11 +16,11 @@
  </br>
 </br>
  	<div id="buttons">
+ 		<div id="center"><img id="pin" src="img/pin.png"></div>
+ 	</br>
 	 	<button id="mirror">Mirror</button>
 	 	&nbsp;
 	 	<button id="normal">Normal</button>	
-	 	&nbsp;
-	 	<button id="center">Center</button>
 	 	</div>
 	 	<div id="directions">
  	</div>
@@ -31,16 +32,18 @@
  	<div id="locationContainer">
  	 <div id="locations">
  		<div id="exit">X</div>
- 		<p>From:</p>
+ 		<p id="locateTop">From:
  		<select id="outSet">
  			<option value="nothing">Choose Location</option>
  			<option value="myLocation">My Location</option>
  			<option value="customLocation">Custom Location</option>
  		</select>
- 		</br>
+ 	</p>
+ 		
  		<input id="fromLocate" type="text"></input>
- 		<p>To:</p>
+ 		<p>To:
  		<input id="toLocate" type="text"></input>
+ 		</p<
  		</br>
  		</br>
  		<button id="submit">Submit</button>
